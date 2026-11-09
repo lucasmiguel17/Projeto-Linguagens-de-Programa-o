@@ -1,3 +1,5 @@
+from produtos import cadastrar_produto
+
 def mostrar_menu():
     print("\n====== GAMESTOCK ======")
     print("1 - Cadastrar produto")
@@ -10,6 +12,8 @@ def mostrar_menu():
 
 
 def main():
+    produtos = []
+
     while True:
         mostrar_menu()
 
@@ -17,6 +21,8 @@ def main():
 
         if opcao == "1":
             print("Cadastro de produtos")
+
+            cadastrar_produto(produtos)
 
         elif opcao == "2":
             print("Lista de produtos")
