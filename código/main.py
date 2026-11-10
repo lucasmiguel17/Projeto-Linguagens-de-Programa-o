@@ -1,4 +1,4 @@
-from produtos import cadastrar_produto
+from produtos import cadastrar_produto, listar_produtos
 
 def mostrar_menu():
     print("\n====== GAMESTOCK ======")

@@ -47,3 +47,24 @@ def cadastrar_produto(produtos):
     produtos.append(produto)
 
     print("\nProduto cadastrado com sucesso!")
+
+
+# -- LISTAR OS PRODUTOS
+
+def listar_produtos(produtos):
+    print("\n====== LISTA DE PRODUTOS ======")
+
+    if not produtos:
+        print("Nenhum produto cadastrado.")
+        return
+
+    for produto in produtos:
+        print(f"\nCódigo: {produto['codigo']}")
+        print(f"Nome: {produto['nome']}")
+        print(f"Categoria: {produto['categoria']}")
+        print(f"Preço: R$ {produto['preco']:.2f}")
+        print(f"Estoque: {produto['estoque']} unidades")
+
+        print("-------------------------------")
+
+    print(f"Total de produtos cadastrados: {len(produtos)}")
