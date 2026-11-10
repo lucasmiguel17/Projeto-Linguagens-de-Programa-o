@@ -19,13 +19,13 @@ def main():
 
         opcao = input("Escolha uma opção: ")
 
-        if opcao == "1":
-            print("Cadastro de produtos")
+        if opcao == "1": # -- CADASTRAR
 
             cadastrar_produto(produtos)
 
-        elif opcao == "2":
-            print("Lista de produtos")
+        elif opcao == "2": # -- LISTAR
+
+            listar_produtos(produtos)
 
         elif opcao == "3":
             print("Consulta de produtos")

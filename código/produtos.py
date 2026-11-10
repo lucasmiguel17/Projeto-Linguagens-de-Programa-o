@@ -13,16 +13,18 @@ def cadastrar_produto(produtos):
     categoria = input("Categoria: ")
 
     # --- Validação do preço
-    try:
-        preco = float(input("Preço: ").replace(",", "."))
+    while True:
+        try:
+            preco = float(input("Preço: R$ ").replace(",", "."))
 
-        if preco <= 0:
-            print("O preço deve ser maior que R$ 0,00.")
-            return
+            if preco <= 0:
+                print("O preço deve ser maior que R$ 0,00.")
+                continue
 
-    except ValueError:
-        print("Preço inválido!")
-        return
+            break
+
+        except ValueError:
+            print("Digite apenas números! Exemplo: 99.90")
 
     # --- Validação do estoque
     try:
