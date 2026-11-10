@@ -1,4 +1,4 @@
-from produtos import cadastrar_produto, listar_produtos
+from produtos import cadastrar_produto, listar_produtos, consultar_produto
 
 def mostrar_menu():
     print("\n====== GAMESTOCK ======")
@@ -27,16 +27,17 @@ def main():
 
             listar_produtos(produtos)
 
-        elif opcao == "3":
-            print("Consulta de produtos")
+        elif opcao == "3": # -- CONSULTAR
+            
+            consultar_produto(produtos)
 
-        elif opcao == "4":
+        elif opcao == "4": # -- REGISTRAR VENDA
             print("Registro de vendas")
 
-        elif opcao == "5":
+        elif opcao == "5": # -- RELATÓRIOS
             print("Relatórios")
 
-        elif opcao == "0":
+        elif opcao == "0": # -- SAIR
             print("Encerrando o programa...")
             break
 
