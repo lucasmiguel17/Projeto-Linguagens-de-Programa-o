@@ -1,3 +1,4 @@
+from vendas import registrar_venda
 from produtos import cadastrar_produto, listar_produtos, consultar_produto
 
 def mostrar_menu():
@@ -13,6 +14,7 @@ def mostrar_menu():
 
 def main():
     produtos = []
+    vendas = []
 
     while True:
         mostrar_menu()
@@ -32,7 +34,8 @@ def main():
             consultar_produto(produtos)
 
         elif opcao == "4": # -- REGISTRAR VENDA
-            print("Registro de vendas")
+            
+            registrar_venda(produtos, vendas)
 
         elif opcao == "5": # -- RELATÓRIOS
             print("Relatórios")

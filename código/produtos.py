@@ -152,5 +152,3 @@ def consultar_produto(produtos):
 
     else:
         print("\nNenhum produto encontrado.")
-
-
