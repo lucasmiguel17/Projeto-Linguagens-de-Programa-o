@@ -5,7 +5,7 @@ from arquivos import carregar_dados, salvar_dados
 def mostrar_menu():
     print("\n====== GAMESTOCK ======")
     print("1 - Cadastrar produto")
-    print("2 - Listar produtos")
+    print("2 - Produtos disponíveis")
     print("3 - Consultar produto")
     print("4 - Registrar venda")
     print("5 - Remover produtos")
@@ -28,7 +28,7 @@ def main():
             cadastrar_produto(produtos)
             salvar_dados(produtos, vendas)
 
-        elif opcao == "2": # -- LISTAR
+        elif opcao == "2": # -- PRODUTOS DISPONÍVEIS
 
             listar_produtos(produtos)
             salvar_dados(produtos, vendas)
