@@ -152,3 +152,47 @@ def consultar_produto(produtos):
 
     else:
         print("\nNenhum produto encontrado.")
+
+
+# 5 -- REMOVER PRODUTOS
+
+def remover_produto(produtos):
+    print("\n====== REMOVER PRODUTO ======")
+
+    if not produtos:
+        print("Não existem produtos cadastrados.")
+        return
+
+    codigo = input("Digite o código do produto que deseja remover: ")
+
+    produto_encontrado = None
+
+    # -- PROCURAR PRODUTO
+    for produto in produtos:
+        if produto["codigo"] == codigo:
+            produto_encontrado = produto
+            break
+
+    if produto_encontrado is None:
+        print("Produto não encontrado!")
+        return
+
+    # -- EXIBIR PRODUTO
+    print("\n====== PRODUTO ENCONTRADO ======")
+    print(f"Código: {produto_encontrado['codigo']}")
+    print(f"Nome: {produto_encontrado['nome']}")
+    print(f"Categoria: {produto_encontrado['categoria']}")
+    print(f"Estoque: {produto_encontrado['estoque']} unidades")
+
+    # -- CONFIRMAR EXCLUSÃO
+    confirmacao = input("\nDeseja realmente remover este produto? (S/N): ").strip().upper()
+
+    if confirmacao == "S":
+        produtos.remove(produto_encontrado)
+        print("\nProduto removido com sucesso!")
+
+    elif confirmacao == "N":
+        print("\nOperação cancelada.")
+
+    else:
+        print("\nOpção inválida. Produto não removido.")
