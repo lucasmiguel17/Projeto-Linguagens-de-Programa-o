@@ -1,3 +1,4 @@
+from código.relatorio import gerar_relatorio
 from vendas import registrar_venda
 from produtos import cadastrar_produto, listar_produtos, consultar_produto, remover_produto
 from arquivos import carregar_dados, salvar_dados
@@ -9,6 +10,7 @@ def mostrar_menu():
     print("3 - Consultar produto")
     print("4 - Registrar venda")
     print("5 - Remover produtos")
+    print("6 - Relatório de vendas")
     print("0 - Sair")
     print("=======================")
 
@@ -46,6 +48,11 @@ def main():
         elif opcao == "5": # -- REMOVER PRODUTOS
 
             remover_produto(produtos)
+            salvar_dados(produtos, vendas)
+
+        elif opcao == "6": # -- RELATÓRIO DE VENDAS
+
+            gerar_relatorio(produtos, vendas)
             salvar_dados(produtos, vendas)
 
         elif opcao == "0": # -- SAIR

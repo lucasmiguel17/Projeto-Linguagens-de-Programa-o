@@ -1,4 +1,12 @@
 {
     "produtos": [],
-    "vendas": []
+    "vendas": [
+        {
+            "codigo": "001",
+            "nome": "Persona 5 Royal",
+            "quantidade": 25,
+            "preco_unitario": 50.0,
+            "total": 1250.0
+        }
+    ]
 }
