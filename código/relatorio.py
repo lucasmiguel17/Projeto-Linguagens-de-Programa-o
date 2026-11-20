@@ -9,7 +9,7 @@ def gerar_relatorio(produtos, vendas):
         return
 
     # -- CALCULAR INFORMAÇÕES
-    
+
     quantidade_vendas = len(vendas)
 
     unidades_vendidas = sum(venda["quantidade"] for venda in vendas)
@@ -17,9 +17,20 @@ def gerar_relatorio(produtos, vendas):
     faturamento = sum(venda["total"] for venda in vendas)
 
     # -- EXIBIR RELATÓRIO
-    print("\n====== RESUMO DAS VENDAS ======")
-    print(f"Quantidade de vendas: {quantidade_vendas}")
-    print(f"Unidades comercializadas: {unidades_vendidas}")
-    print(f"Faturamento bruto: R$ {faturamento:.2f}")
+    print("\n====== RESUMO GERAL ======")
+    print(f"Vendas realizadas: {quantidade_vendas}")
+    print(f"Unidades vendidas: {unidades_vendidas}")
+    print(f"Faturamento total: R$ {faturamento:.2f}")
 
-    print("===============================")
+    # -- EXIBIR VENDAS INDIVIDUAIS
+    print("\n====== DETALHAMENTO DAS VENDAS ======")
+
+    for i, venda in enumerate(vendas, start=1):
+        print(f"\nVenda {i}")
+        print(f"Código: {venda['codigo']}")
+        print(f"Produto: {venda['nome']}")
+        print(f"Quantidade: {venda['quantidade']}")
+        print(f"Preço unitário: R$ {venda['preco_unitario']:.2f}")
+        print(f"Total: R$ {venda['total']:.2f}")
+
+    print("\n====================================")

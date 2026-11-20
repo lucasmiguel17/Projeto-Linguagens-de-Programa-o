@@ -1,4 +1,4 @@
-from código.relatorio import gerar_relatorio
+from relatorio import gerar_relatorio
 from vendas import registrar_venda
 from produtos import cadastrar_produto, listar_produtos, consultar_produto, remover_produto
 from arquivos import carregar_dados, salvar_dados
